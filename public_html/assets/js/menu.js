@@ -72,11 +72,7 @@ function runMenu(active) {
             $('#aboutout').html('');
             $('#mdout').html('');
             // get and show the TOC and enable the PDF button
-            showTOCFile('#mdtoc','./mdfiles/toc.php?toc=./content/toc.txt', function() {
-                $('#topdfbtn').prop('disabled', true);
-                $('#topdfbtn').off('click');
-                $('#pdfout-ctrls').show();
-            });
+            showTOCFile('#mdtoc','./mdfiles/toc.php?toc=./content/toc.txt');
             // create a smooth transition...
             $('#content_2').addClass('fade');
             $('#content_2').show();

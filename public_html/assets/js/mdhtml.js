@@ -49,6 +49,24 @@ function showMDFile(elem, loc, cb = null) {
     httpGet(loc, function(resp) {
         var mdhtml = converter.makeHtml(resp);
         $(elem).html(mdhtml);
+
+        /*
+            If this is placed at the top of a
+            markdown file - 
+        
+            <div id="mddocpdf" style="display:none;"></div>
+        
+            then when that file is shown the "Save to PDF"
+            button will appear.
+
+            NOTE: A blank line should follow the <div> line
+        */
+        if($(elem).find('#mddocpdf').length > 0) {
+            $('#pdfout-ctrls').show();
+        } else {
+            $('#pdfout-ctrls').hide();
+        }
+
         if(cb !== null) cb();
     }, true);
 }
@@ -127,7 +145,6 @@ function showTOCFile(elem, loc, _cb = null) {
 
     $(elem).hide();
     $('#mdtoctable .toc-item').off('click');
-    $('#topdfbtn').off('click');
 
     // the next sibling element is always the "out"
     // container.
@@ -137,7 +154,6 @@ function showTOCFile(elem, loc, _cb = null) {
         $(elem).html(resp);
 
         $('#mdtoctable .toc-item').off('click');
-        $('#topdfbtn').off('click');
 
         $('#mdtoctable .toc-item').click(function(tocitem) {
             $('#mdtoctable .toc-item').each(function(idx) {
@@ -148,20 +164,20 @@ function showTOCFile(elem, loc, _cb = null) {
             });
             $('#'+tocitem.target.id).addClass('nav-active');
             $('#'+tocitem.target.id).removeClass('nav-hover');
-            $('#topdfbtn').off('click');
 
             showMDFile(mdout,tocitem.target.dataset['mdfile'], function() {
-
                 // only manage the "to PDF" button if it was made
                 // to be visible. 
                 if($('#pdfout-ctrls').is(':visible')) {
                     $('#topdfbtn').prop('disabled', false);
-                    $('#topdfbtn').click(function(ev) {
-                        $('#topdfbtn').off('click');
+                    //$('#topdfbtn').click(function() {
+                    $('#topdfbtn').one('click', function() {
+                        // disable the button, one PDF per viewing
+                        $('#topdfbtn').prop('disabled', true);
                         //console.log('to PDF! - '+tocitem.target.dataset['mdfile']);
                         mdToPDF(tocitem.target.dataset['mdfile']);
                     });
-                }
+                } 
 
                 // on this site <a> only exists in the rendered markdown file,
                 // jump to the anchor and remove the hastag from the URL bar
