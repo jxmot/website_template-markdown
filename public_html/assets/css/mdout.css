@@ -1,0 +1,88 @@
+@font-face {
+    font-family: "FontAwesomeSolid";
+    font-weight: bold;
+    font-style: normal;
+    src : url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/webfonts/fa-solid-900.ttf") format("truetype");
+}
+
+
+.mdtoggle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width:20%;
+}
+
+.mdfont-active {
+    border:2px solid green;
+    background-color: green;
+    color: black;
+}
+
+.mdfont-inactive {
+    border:1px solid #b5b5ee;
+}
+
+.mdfont {
+    font-family: Verdana, sans-serif!important;
+}
+
+/*
+.mdselector pre {
+    border: 1px solid #fcc603;
+}
+
+.mdselector pre code {
+    color: #b5b5ee;
+    font-family: VT323, monospace!important;
+}
+
+.mdselector p code {
+    font-family: VT323, monospace!important;
+}
+
+.mdselector code {
+    font-family: VT323, monospace!important;
+}
+
+.mdselector a:link, a:visited {
+    color: #fcc603;
+}
+
+.mdselector a:hover, a:active  {
+    color: #00FF00;
+}
+*/
+
+.mdselector a[target="_blank"]:after {
+    font-size: small;
+    content: ' \f35d';
+    font-family: "FontAwesomeSolid";
+    /* color: #fcc603; */
+}
+
+.mdselector a[target="_blank"]:hover:after {
+    /* color: #00FF00; */
+}
+
+.mdanchor {
+    padding-top: 2em;
+    margin-top: -2em;
+}
+
+#mdout,#aboutout {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    font-size: 1rem;
+}
+
+.mdnoshadow {
+    text-shadow: none;
+}
+
+code {
+    /* font-size: 1.25em!important; */
+}
+

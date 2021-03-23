@@ -1,0 +1,32 @@
+
+.footer-bgdark {
+    /* background-color: rgba(0, 0, 0, 0.9)!important; */
+    background-color: rgba(10, 10, 10, 0.9)!important;
+    /* blur the top edge */
+    box-shadow: 0px -13px 30px 2px rgba(10,10,10,0.9);
+    -webkit-box-shadow: 0px -13px 30px 2px rgba(10,10,10,0.9);
+    -moz-box-shadow: 0px -13px 30px 2px rgba(10,10,10,0.9);
+}
+
+.footer-bglight {
+    background-color: white;
+}
+
+.footer-body {
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display:inline;
+    list-style:none;
+    clear: both;
+}
+
+.footer-font {
+    font-size:smaller;
+}
+
+.footer-width {
+    width:100%;
+}
+

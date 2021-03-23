@@ -1,0 +1,151 @@
+/* 
+    no printing!
+*/
+@media print {
+  body {
+    display:none;
+  }
+}
+
+/* 
+    no copying!
+*/
+.nocopy {
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+
+body {
+    /* margin: 0; */
+    position: relative;
+    height: 100vh;
+
+    /* show scroll bars if needed */
+    overflow: auto;
+
+/*
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+*/
+
+    border-color: none!important;
+}
+
+.alt-font {
+    font-family: Verdana, sans-serif;
+}
+
+.alt-font code {
+    font-size: 100%;
+}
+
+.center-text {
+  text-align: center;
+}
+
+#maincontent {
+    opacity: 1;
+    transition-duration: 5.7s;
+    transition-property: opacity;
+}
+
+#maincontent.fade {
+    opacity: 0;
+}
+
+.page-content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    /*
+    this is needed because it prevents this
+    container from overflowing and making a 
+    vert-scroll bar appear
+    */
+    overflow: auto!important;
+}
+
+@media (max-width: 768px){
+    .page-content {
+        padding-right: 0;
+        /* font-size: small; */
+        padding-top: 2.5rem;
+        max-width: 90%;
+    }
+}
+
+#content_1,#about,#content_2,#contact,#thankyou {
+    margin-top: 5em;
+}
+
+#landing,#content_1,#about,#content_2,#contact {
+    opacity: 1;
+    transition-duration: .5s;
+    transition-property: opacity;
+}
+
+#landing.fade,#content_1.fade,#about.fade,#content_2.fade,#contact.fade {
+    opacity: 0;
+}
+
+.sect-content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 70%
+}
+
+@media screen and (max-width: 2400px){
+    .sect-content {
+        max-width: 60%
+    }
+}
+
+@media screen and (max-width: 1400px){
+    .sect-content {
+        max-width: 60%
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .sect-content {
+        max-width: 70%
+    }
+}
+
+@media screen and (max-width: 950px){
+    .sect-content {
+        max-width: 80%
+    }
+}
+
+@media screen and (max-width: 768px){
+    .sect-content {
+        max-width: 100%
+    }
+}
+
+@media screen and (max-width: 100px){
+    .sect-content {
+        max-width: 100%
+    }
+}
+
+.text-upcase {
+    text-transform: uppercase;
+}
+
+.in-center {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px){
+    .in-center {
+        top: 35%;
+    }
+}

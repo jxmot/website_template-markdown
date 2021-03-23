@@ -1,0 +1,134 @@
+/*
+    Table of Contents for markdown content.
+
+    Used in - 
+        public_html/mdfiles/toc.php
+        public_html/assets/js/mdhtml.js
+*/
+.mdtoctable-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 2400px){
+    .mdtoctable-width {
+        max-width: 45%;
+    }
+    .mdtoctable-narrow {
+        max-width: 25%;
+    }
+}
+
+@media screen and (max-width: 1400px){
+    .mdtoctable-width {
+        max-width: 50%;
+    }
+    .mdtoctable-narrow {
+        max-width: 25%;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .mdtoctable-width {
+        max-width: 50%;
+    }
+    .mdtoctable-narrow {
+        max-width: 25%;
+    }
+}
+
+@media screen and (max-width: 950px){
+    .mdtoctable-width {
+        max-width: 60%;
+    }
+    .mdtoctable-narrow {
+        max-width: 35%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .mdtoctable-width {
+        max-width: 80%;
+    }
+    .mdtoctable-narrow {
+        max-width: 45%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .mdtoctable-width {
+        max-width: 100%;
+    }
+    .mdtoctable-narrow {
+        max-width: 55%;
+    }
+}
+
+@media screen and (max-width: 100px){
+    .mdtoctable-width {
+        max-width: 100%;
+    }
+    .mdtoctable-narrow {
+        max-width: 55%;
+    }
+}
+
+.mdtoctable-cell  {
+    border: 2px dotted #b5b5ee;
+}
+
+span.toc-item {
+    margin-top: .25em;
+    display: inline-block;
+}
+
+@media screen and (max-width: 2400px){
+    span.toc-font {
+        font-size: 1.75rem;
+    }
+}
+
+@media screen and (max-width: 1400px){
+    span.toc-font {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    span.toc-font {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 950px){
+    span.toc-font {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 900px){
+    span.toc-font {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+    span.toc-font {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 600px){
+    span.toc-font {
+        font-size: 1.0rem;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 100px){
+    span.toc-font {
+        font-size: 1.0rem;
+        font-weight: bold;
+    }
+}

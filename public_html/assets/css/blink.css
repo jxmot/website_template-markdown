@@ -1,0 +1,83 @@
+
+/* 
+    Just some CSS to create a blinking effect.
+
+    
+    The "blink" can be adjusted by trying different
+    opacity values. WIth the timing value used in 
+    .blinkit this has the effect of a smooth fade-in,
+    hold, and blink off. 
+*/
+@keyframes blinky { 
+    0% { 
+        opacity: 0; 
+    } 
+    40% { 
+        opacity: 0.8; 
+    } 
+    50% { 
+        opacity: 1; 
+    } 
+    60% { 
+        opacity: 1; 
+    } 
+    80% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 0; 
+    } 
+} 
+
+/* 
+    Just some CSS to create a blinking effect.
+*/
+.blinkit {
+    animation: blinky 2.5s linear infinite; 
+}
+
+/*
+    Blink on/off.
+*/
+@keyframes cursblink { 
+    0% { 
+        opacity: 0; 
+    } 
+
+    50% { 
+        opacity: 0.8; 
+    } 
+
+    100% { 
+        opacity: 0; 
+    } 
+} 
+
+.blinkcurs {
+    animation: cursblink 1.5s linear infinite; 
+}
+
+/*
+    The inverse of .blinkcurs, if each are used on 
+    adjacent elements the effect will be an seen as
+    an alternating on/off.
+*/
+@keyframes _cursblink { 
+    0% { 
+        opacity: 0.8; 
+    } 
+
+    50% { 
+        opacity: 0; 
+    } 
+
+    100% { 
+        opacity: 0.8; 
+    } 
+} 
+
+._blinkcurs {
+    animation: _cursblink 1.5s linear infinite; 
+}
+
+

@@ -1,0 +1,34 @@
+/*
+    As described at (but with modifications & improvements) - 
+
+        https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+
+    The JS code is found at public_html/assets/js/totop.js
+*/
+.gototop {
+    display: none;    
+    position: fixed;  
+
+    bottom: 5%;       
+    right: 2%;        
+    margin-bottom: 5%;
+
+    /* placement and colors */
+    z-index: 99;  
+    border: none; 
+    outline: none;
+    background-color: rgba(120, 10, 10, 0.7);
+    color: white;   
+    cursor: pointer;
+
+    /* circle */
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+}
+
+.gototop:hover {
+    background-color: rgba(10, 120, 10, 0.7);
+    color: white;
+}
+

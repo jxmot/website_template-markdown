@@ -1,0 +1,39 @@
+/*
+    Used with public_html/mdfiles/pdfheading.php and 
+    PDF rendering.
+
+
+*/
+.pdfhead {
+    font-size:small;
+    border-spacing:0;
+    margin:0px auto;
+
+    border-collapse:separate;
+    border-spacing: 2.5rem 0;
+}
+
+.pdfhead td {
+    font-weight:bold;
+    text-align:center;
+    vertical-align:top;
+    overflow:hidden;
+    padding-top: 3rem;
+    word-break:normal;
+}
+
+@media screen and (max-width: 767px) {
+    .pdfhead {
+        width: auto !important;
+    }
+    .pdfhead-respv {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: auto 0px;
+    }
+}
+
+body > *:last-child {
+    padding-bottom: 5rem;
+}
+
