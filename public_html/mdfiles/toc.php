@@ -86,8 +86,8 @@ if(file_exists($file)) {
 
     echo '<div id="pdfout-ctrls" class="text-center" style="display:none;">'."\n";
     echo "    <br>\n";
-    echo "    <h4>Save selected as PDF?</h4>\n";
-    echo '    <button id="topdfbtn" type="button" class="btn btn-info btn-sm">Save as PDF</button>'."\n";
+    echo "    <h4>Save this as a PDF?</h4>\n";
+    echo '    <button id="topdfbtn" type="button" class="btn btn-info btn-sm">Save PDF</button>'."\n";
     echo "</div>\n";
 
 } else {
