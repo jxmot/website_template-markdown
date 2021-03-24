@@ -4,4 +4,5 @@ logs/*.*
 *.bak
 _*.md
 _*.sh
+_*.php
 READ-FIRST-BEFORE-UPDATING.txt
