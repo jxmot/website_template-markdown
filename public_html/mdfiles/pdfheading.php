@@ -29,6 +29,10 @@
 
     The variable `$filecyear` will will be "2002" when this script is executed on
     the file `pastlorem.md`.
+
+    On Linux, change the date with this command - 
+
+        touch -d 20020101 pastlorem.md
 */
 $filecyear = '';
 $file = '';
