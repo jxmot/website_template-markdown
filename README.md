@@ -20,6 +20,7 @@ There are some additional features that I required:
   * The "table of contents" and the content files are read *on demand* and rendered. 
   * Links back to the site(page) will always be to the landing.
 * PDF Export: The ability to export selective content to PDF.
+* ALternate font: The ability to alternate between two fonts.
 * A minimal and lightweight appearance.
 * Small code footprint, < 200k not including third party libraries(~1.7m).
 
@@ -154,7 +155,7 @@ Enabling is done on a per-file basis. Each markdown content file can enable PDF 
 
 To create and save the PDF I used html2pdf.js v0.9.2 (github.com/eKoopmans/html2pdf.js). I tried several other solutions without success. Although html2pdf.js is working for me *there are limitations*. Its current version at the time (v0.9.2) is built with out of date version of jsPDF, html2canvas, and es6-promise. The most noticeable aspect of the out dated dependencies is that some of the *documented options* are newer and do not exist in the jsPDF version used (v1.4.1). jsPDF (github.com/MrRio/jsPDF) is currently at v2.3.1.
 
-Known Issues:
+**Known Issues**:
 
 * Links do not render correctly, they always contain the base URI when the PDF was created.
 * Page breaks, I'm not absolutely sure there's a problem. I'll read the docs again and see if I can get it working better.
@@ -175,6 +176,18 @@ But this is was is rendered instead -
 ```
 <h6 id="nbspnbspnbspnbspsite-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong>Site Content</strong></h6>
 ```
+
+* Render fonts - It seems that changing fonts does not work well. The HTML gets rendered properly with the CSS classes. And if viewed independently the rendered HTML does apply the correct font.
+
+### Enabling the Font Select Menu
+
+Enabling is done on a per-file basis. Each markdown content file can enable font selection as desired. Just add the this line followed by a blank line to the top of the file - 
+
+```
+<div id="mddocfont" style="display:none;"></div>
+```
+
+**NOTE**: A table of contents must also be present. The Choose Font Below" buttond are rendered with the TOC.
 
 ### Editing the Navigation Menu
 
