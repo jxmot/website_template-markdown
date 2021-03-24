@@ -66,7 +66,8 @@ NOTE:
 }
 
 .mdselector pre {
-    border: 1px solid #fcc603;
+    font-weight: bold;
+    /* border: 1px solid #fcc603; */
 }
 
 .mdselector pre code {
