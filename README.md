@@ -130,13 +130,27 @@ Clicking on a "Topic" will render and display the associated markdown content fi
 
 The "Save PDF" prompt and button will be seen only *if enabled in the markdown content file*.
 
+### Rendering Content
+
+I used showdow.js 1.9.1 (github.com/showdownjs/showdown) to render the markdown to HTML. The copy in this repository has been modified by me - 
+
+* Add CSS classes to all `<hX>` tags, with the ability to optionally skip the firs heading tag.
+* When `completeHTMLDocument` is `true` - 
+  * Add CSS classes to `<body>`
+  * Include custom: `<meta>`, `<style>` links and CSS, `<script>` links and code
+  * Include custom HTML at either just after the `<body>` or just before the `</body>`
+
 ### Enabling Save to PDF
 
-Enabling is done on a per-file basis. Each markdown content file can enable PDF save as desired. Just add the this line followed by a blank line - 
+Enabling is done on a per-file basis. Each markdown content file can enable PDF save as desired. Just add the this line followed by a blank line to the top of the file - 
 
 ```
 <div id="mddocpdf" style="display:none;"></div>
 ```
+
+**NOTE**: A table of contents must also be present. The "Save PDF" button is rendered with the TOC.
+
+To create and save the PDF I used html2pdf.js v0.9.2 (github.com/eKoopmans/html2pdf.js). I tried several other solutions without success. Although html2pdf.js is working for me *there are limitations*. Its current version at the time (v0.9.2) is built with out of date version of jsPDF, html2canvas, and es6-promise. The most noticeable aspect of the out dated dependencies is that some of the *documented options* are newer and do not exist in the jsPDF version used (v1.4.1). jsPDF (github.com/MrRio/jsPDF) is currently at v2.3.1.
 
 ### Editing the Navigation Menu
 
