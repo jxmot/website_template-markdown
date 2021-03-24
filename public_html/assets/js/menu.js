@@ -70,6 +70,7 @@ function runMenu(active) {
         case 'navsel_3':
             $('#abouttoc').html('');
             $('#aboutout').html('');
+            $('#mdtoc').html('');
             $('#mdout').html('');
             // get and show the TOC and enable the PDF button
             showTOCFile('#mdtoc','./mdfiles/toc.php?toc=./content/toc.txt');
@@ -84,6 +85,7 @@ function runMenu(active) {
         case 'navsel_4':
             $('#mdtoc').html('');
             $('#mdout').html('');
+            $('#abouttoc').html('');
             $('#aboutout').html('');
             // get and show the TOC and do NOT enable the PDF button
             showTOCFile('#abouttoc','./mdfiles/toc.php?toc=./content/about.txt');
