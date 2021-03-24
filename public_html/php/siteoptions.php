@@ -56,8 +56,7 @@ if(_IP_LOGGING === true) {
 }
 
 /*
-    Language setting used by our HTML and required by the
-    reCAPTCHA api. The charset is only used in our HTML.
+    Language setting and charset used by our HTML.
 */
 define('SITE_LANG', 'en-US');
 define('SITE_CHARSET', 'UTF-8');
@@ -72,8 +71,8 @@ define('SITE_CHARSET', 'UTF-8');
     sites that consist of muliple pages remove it from here and place it at 
     the top of each page. Change the identifier as needed for the pages.
 */
-define('PAGE_TITLE','Site Template with Bootstrap 4.6 and Markdown Rendering');
-define('SITE_DESC','Site Template with Bootstrap 4.6 and Markdown Rendering');
+define('PAGE_TITLE','Site Template with Bootstrap 4.6, Markdown Rendering, and PDF Save.');
+define('SITE_DESC','Site Template with Bootstrap 4.6, Markdown Rendering, and PDF Save.');
 define('SITE_AUTH','https://github.com/jxmot');
 
 // the target that is loaded upon clicking submit
