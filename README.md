@@ -30,7 +30,7 @@ For the most part the appearance is plain. With just a little embellishment on t
 The initial page load and the transitions between navigation menu items utilize a brief fade-in instead of a harsh instant-on transition.
 
 <p align="center">
-  <img src="./mdimg/home-800x600.png" alt="Home Screen Shot" txt="Home Screen Shot" style="border: 2px solid black;max-width:50%;"/>
+  <img style="border: 2px solid black;max-width:50%;" src="./mdimg/home-800x600.png" alt="Home Screen Shot" txt="Home Screen Shot"/>
 </p>
 
 ## What's Here
