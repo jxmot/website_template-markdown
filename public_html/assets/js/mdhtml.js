@@ -67,6 +67,23 @@ function showMDFile(elem, loc, cb = null) {
             $('#pdfout-ctrls').hide();
         }
 
+        /*
+            If this is placed at the top of a
+            markdown file - 
+        
+            <div id="mddocfont" style="display:none;"></div>
+        
+            then when that file is shown the "Choose Font Below"
+            buttons will appear.
+
+            NOTE: A blank line should follow the <div> line
+        */
+        if($(elem).find('#mddocfont').length > 0) {
+            $('#mdfont-ctrls').show();
+        } else {
+            $('#mdfont-ctrls').hide();
+        }
+
         if(cb !== null) cb();
     }, true);
 }
@@ -90,6 +107,15 @@ function getMDHTML(loc, cb = null) {
         // tell the PDF converter to render a full 
         // HTML file. 
         converter.setOption('completeHTMLDocument', true);
+
+        if($('#mdfont-ctrls').is(':visible')) {
+            if($('#mdfont_b').hasClass('mdfont-active')) {
+                converter.setOption('bodyClasses', 'mdselector alt-mdfont');
+            } else {
+                converter.setOption('bodyClasses', 'mdselector mdfont');
+            }
+        }
+
         // retrieve the PDF heading 
         httpGet('./mdfiles/pdfheading.php?doc='+loc, function(phead) {
             // Add this piece to the renderer
@@ -101,6 +127,7 @@ function getMDHTML(loc, cb = null) {
             //converter.setOption('bodyPrepend',undefined);
             converter.setOption('bodyAppend',undefined);
             converter.setOption('completeHTMLDocument', false);
+            converter.setOption('bodyClasses', 'mdselector mdfont');
             // provide the rendered HTML to the caller
             if(cb !== null) cb(mdhtml);
         }, false);
@@ -179,6 +206,46 @@ function showTOCFile(elem, loc, _cb = null) {
                     });
                 } 
 
+                // only manage the font selection if it was made
+                // to be visible. 
+                if($('#mdfont-ctrls').is(':visible')) {
+                    if($(mdout).hasClass('alt-mdfont')) {
+                        $('#mdfont_a').removeClass('mdfont-active');
+                        $('#mdfont_a').addClass('mdfont-inactive');
+                        $('#mdfont_a').addClass('nav-hover');
+            
+                        $('#mdfont_b').addClass('mdfont-active');
+                        $('#mdfont_b').removeClass('mdfont-inactive');
+                        $('#mdfont_b').removeClass('nav-hover');
+                    }
+            
+                    $('#mdfontsel .mdfont_item').click(function(fontitem) {
+//                        console.log('change font');
+                        $('#mdfontsel .mdfont_item').each(function(idx) {
+                            if($(this).hasClass('mdfont-active')) {
+                                $(this).removeClass('mdfont-active');
+                                $(this).addClass('mdfont-inactive');
+                                $(this).addClass('nav-hover');
+                            }
+                        });
+            
+                        $('#'+fontitem.target.id).addClass('mdfont-active');
+                        $('#'+fontitem.target.id).removeClass('mdfont-inactive');
+                        $('#'+fontitem.target.id).removeClass('nav-hover');
+            
+                        // add or remove the font class(es)
+                        if(fontitem.target.id === 'mdfont_a') {
+                            $(mdout).addClass('mdfont');
+                            $(mdout).removeClass('alt-mdfont');
+                        } else {
+                            if(fontitem.target.id === 'mdfont_b') {
+                                $(mdout).removeClass('mdfont');
+                                $(mdout).addClass('alt-mdfont');
+                            }
+                        }
+                    });
+                }
+
                 // on this site <a> only exists in the rendered markdown file,
                 // jump to the anchor and remove the hastag from the URL bar
                 $('a').on('click', function() {
@@ -187,45 +254,6 @@ function showTOCFile(elem, loc, _cb = null) {
                 });
             });
         });
-
-        // Only manage font selection if the controls are visible.
-        if($('#mdfont-ctrls').is(':visible')) {
-            if($(mdout).hasClass('alt-font')) {
-                $('#mdfont_a').removeClass('mdfont-active');
-                $('#mdfont_a').addClass('mdfont-inactive');
-                $('#mdfont_a').addClass('nav-hover');
-    
-                $('#mdfont_b').addClass('mdfont-active');
-                $('#mdfont_b').removeClass('mdfont-inactive');
-                $('#mdfont_b').removeClass('nav-hover');
-            }
-    
-            $('#mdfontsel .mdfont_item').click(function(fontitem) {
-//                console.log('change font');
-                $('#mdfontsel .mdfont_item').each(function(idx) {
-                    if($(this).hasClass('mdfont-active')) {
-                        $(this).removeClass('mdfont-active');
-                        $(this).addClass('mdfont-inactive');
-                        $(this).addClass('nav-hover');
-                    }
-                });
-    
-                $('#'+fontitem.target.id).addClass('mdfont-active');
-                $('#'+fontitem.target.id).removeClass('mdfont-inactive');
-                $('#'+fontitem.target.id).removeClass('nav-hover');
-    
-                // add or remove the font class(es)
-                if(fontitem.target.id === 'mdfont_a') {
-                    $(mdout).addClass('mdfont');
-                    $(mdout).removeClass('alt-font');
-                } else {
-                    if(fontitem.target.id === 'mdfont_b') {
-                        $(mdout).removeClass('mdfont');
-                        $(mdout).addClass('alt-font');
-                    }
-                }
-            });
-        }
 
         $(elem).show();
 

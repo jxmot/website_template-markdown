@@ -77,13 +77,16 @@ if(file_exists($file)) {
     echo "    </div>\n";
     echo "</div>\n";
 
+    // the visibility of this element is managed in  public_html/assets/js/mdhtml.js
     echo '<div id="mdfont-ctrls" class="text-center" style="display:none;">'."\n";
+    echo "    <br>\n";
     echo "    <h4>Choose Font Below:</h4>\n";
     echo '    <div id="mdfontsel" class="mdtoggle">'."\n";
     echo '        <h4 id="mdfont_a" class="mdfont_item mdfont-active">&nbsp;A&nbsp;</h4>&nbsp;<h4 id="mdfont_b" class="mdfont_item mdfont-inactive nav-hover">&nbsp;B&nbsp;</h4>'."\n";
     echo "    </div>\n";
     echo "</div>\n";
 
+    // the visibility of this element is managed in  public_html/assets/js/mdhtml.js
     echo '<div id="pdfout-ctrls" class="text-center" style="display:none;">'."\n";
     echo "    <br>\n";
     echo "    <h4>Save this as a PDF?</h4>\n";
