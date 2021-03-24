@@ -187,7 +187,7 @@ Enabling is done on a per-file basis. Each markdown content file can enable font
 <div id="mddocfont" style="display:none;"></div>
 ```
 
-**NOTE**: A table of contents must also be present. The Choose Font Below" buttond are rendered with the TOC.
+**NOTE**: A table of contents must also be present. The Choose Font Below" buttons are rendered with the TOC.
 
 ## Editing the Navigation Menu
 
