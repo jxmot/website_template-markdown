@@ -35,14 +35,6 @@ body {
     border-color: none!important;
 }
 
-.alt-font {
-    font-family: Verdana, sans-serif;
-}
-
-.alt-font code {
-    font-size: 100%;
-}
-
 .center-text {
   text-align: center;
 }

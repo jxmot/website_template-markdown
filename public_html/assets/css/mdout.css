@@ -16,45 +16,80 @@
 }
 
 .mdfont-active {
-    border:2px solid green;
-    background-color: green;
+    background-color: rgba(137, 189, 138, 1);
+    border-radius: 15px 50px;
     color: black;
 }
 
 .mdfont-inactive {
-    border:1px solid #b5b5ee;
+    /* border:1px solid #b5b5ee; */
 }
 
 .mdfont {
     font-family: Verdana, sans-serif!important;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+.alt-mdfont {
+    font-family: 'Roboto Mono', monospace!important;
+}
+
+.alt-mdfont code {
+    font-size: 100%;
+}
+
+
+
 /*
+
+NOTE:
+    * The current state of font selection is that 
+    was functional in a different life. It was 
+    almost removed in this iteration but hung 
+    around anyway. 
+    * The code is working, go to toc.php and
+    make the font button element visible.
+    * The buttons were made from <hX> tags and
+    not real buttons. That needs some work to 
+    make them appear and operate as a nice
+    pair of radio buttons.
+
+*/
+.mdbutton {
+    background-color: grey;
+}
+
+.mdbutton:hover {
+    background-color: rgba(189, 183, 137, 1);
+    border-radius: 15px 50px;
+}
+
 .mdselector pre {
     border: 1px solid #fcc603;
 }
 
 .mdselector pre code {
-    color: #b5b5ee;
-    font-family: VT323, monospace!important;
+    /* color: #b5b5ee; */
+    font-family: 'Roboto Mono', monospace!important;
 }
 
 .mdselector p code {
-    font-family: VT323, monospace!important;
+    font-family: 'Roboto Mono', monospace!important;
 }
 
 .mdselector code {
-    font-family: VT323, monospace!important;
+    font-family: 'Roboto Mono', monospace!important;
 }
 
 .mdselector a:link, a:visited {
-    color: #fcc603;
+    /* color: #fcc603; */
 }
 
 .mdselector a:hover, a:active  {
-    color: #00FF00;
+    /* color: #00FF00; */
 }
-*/
+
 
 .mdselector a[target="_blank"]:after {
     font-size: small;
