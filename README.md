@@ -27,12 +27,10 @@ There are some additional features that I required:
 
 For the most part the appearance is plain. With just a little embellishment on the navigation menu. Other than white, the colors are subdued.
 
-The initial page load and the transitions between navigation menu items utilize a brief fade-in instead of a harsh instant-on transition.
-
-<style>p img {border: 2px solid black;max-width:50%;}</style>
+The initial page load and the transitions between navigation menu items utilize a brief fade-in instead of a harsh instant-on transition. This logic is implemented in `assets/js/menu.js:runMenu()`.
 
 <p align="center">
-  <img src="./mdimg/home-800x600.png" alt="Home Screen Shot" txt="Home Screen Shot"/>
+  <img src="./mdimg/home-800x600.png" alt="Home Screen Shot" txt="Home Screen Shot" style="border: 2px solid black;max-width:50%;"/>
 </p>
 
 ## What's Here
@@ -152,7 +150,63 @@ Enabling is done on a per-file basis. Each markdown content file can enable PDF 
 
 **NOTE**: A table of contents must also be present. The "Save PDF" button is rendered with the TOC.
 
+### Known PDF Issues
+
 To create and save the PDF I used html2pdf.js v0.9.2 (github.com/eKoopmans/html2pdf.js). I tried several other solutions without success. Although html2pdf.js is working for me *there are limitations*. Its current version at the time (v0.9.2) is built with out of date version of jsPDF, html2canvas, and es6-promise. The most noticeable aspect of the out dated dependencies is that some of the *documented options* are newer and do not exist in the jsPDF version used (v1.4.1). jsPDF (github.com/MrRio/jsPDF) is currently at v2.3.1.
 
+Known Issues:
+
+* Links do not render correctly, they always contain the base URI when the PDF was created.
+* Page breaks, I'm not absolutely sure there's a problem. I'll read the docs again and see if I can get it working better.
+
 ### Editing the Navigation Menu
+
+This works like the TOC. A text file contains the navigation menu item text and an associated HTML id. For example, the `public_html/php/navmenu.txt` file contains - 
+
+```
+Home,navsel_1
+About,navsel_4
+Other,navsel_3
+Stuff,navsel_2
+Contact,navsel_5
+```
+
+Make sure there is no blank line at the end of the file. 
+
+The text to the left of the commas are the text used in the menu items. The right side should not be edited, it associates the menu text with a action impmented in `public_html/assets/js/menu.js`.
+
+At this time the navigation menu is fixed at 5 items with no sub-menus. 
+
+The `navmenu.txt` file can be chosen by editing `index.php`. Find the following in `index.php`:
+
+```
+        <div class="container" id="nav-container">
+            <nav class="navbar navbar-expand-md fixed-top navbar-light navbar-bglight">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sitenavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="sitenavbar">
+<?php
+// Configure the Nav Menu
+$_SESSION['navmenutxt'] = './php/navmenu2.txt'; 
+require_once './php/navmenu.php'; 
+?>
+                </div>
+            </nav>
+        </div>
+```
+
+Edit the line - 
+
+```
+$_SESSION['navmenutxt'] = './php/navmenu2.txt';
+```
+
+and change the text file to the one you want to use.
+
+### Editing the Navigation Menu **Actions**
+
+The *logic* of this web page is implemtented in `public_html/assets/js/menu.js:runMenu()`. Each menu item will initiate a jQuery `.show()` and fade-in when activated. Two of the actions will open and render a TOC when activated.
+
+Changes would only need to occur in `public_html/assets/js/menu.js:runMenu()` when altering how the menu items work.
 
