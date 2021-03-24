@@ -97,19 +97,23 @@ require_once './php/navmenu.php';
     </div>
     <div class="page-content">
         <section id="content_1" class="content-selector sect-content" style="display:none;">
+            <div id="content_1-toc" class="mdselector">
+            </div>
+            <div id="content_1-out" class="mdselector sect-content">
+            </div>
         </section>
 
         <section id="content_2" class="content-selector" style="display:none;">
-            <div id="mdtoc" class="mdselector">
+            <div id="content_2-toc" class="mdselector">
             </div>
-            <div id="mdout" class="mdselector sect-content">
+            <div id="content_2-out" class="mdselector sect-content">
             </div>
         </section>
 
-        <section id="about" class="content-selector" style="display:none;">
-            <div id="abouttoc" class="mdselector">
+        <section id="content_3" class="content-selector" style="display:none;">
+            <div id="content_3-toc" class="mdselector">
             </div>
-            <div id="aboutout" class="mdselector sect-content">
+            <div id="content_3-out" class="mdselector sect-content">
             </div>
         </section>
 

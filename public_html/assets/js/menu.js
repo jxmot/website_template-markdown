@@ -42,7 +42,7 @@ function runMenu(active) {
     // navsel_1 = Home                          landing
     // navsel_2 = navsel_2                      content_1
     // navsel_3 = navsel_3                      content_2
-    // navsel_4 = About                         about
+    // navsel_4 = About                         content_3
     // navsel_5 = Contact                       contact
 
     switch(active) {
@@ -68,12 +68,12 @@ function runMenu(active) {
         // When chosen, retrieve and display a TOC for the
         // content that is accessible here. 
         case 'navsel_3':
-            $('#abouttoc').html('');
-            $('#aboutout').html('');
-            $('#mdtoc').html('');
-            $('#mdout').html('');
+            $('#content_3-toc').html('');
+            $('#content_3-toc').html('');
+            $('#content_2-toc').html('');
+            $('#content_2-out').html('');
             // get and show the TOC and enable the PDF button
-            showTOCFile('#mdtoc','./mdfiles/toc.php?toc=./content/toc.txt');
+            showTOCFile('#content_2-toc','./mdfiles/toc.php?toc=./content/toc.txt');
             // create a smooth transition...
             $('#content_2').addClass('fade');
             $('#content_2').show();
@@ -83,17 +83,17 @@ function runMenu(active) {
             break;
 
         case 'navsel_4':
-            $('#mdtoc').html('');
-            $('#mdout').html('');
-            $('#abouttoc').html('');
-            $('#aboutout').html('');
+            $('#content_2-toc').html('');
+            $('#content_2-out').html('');
+            $('#content_3-toc').html('');
+            $('#content_3-out').html('');
             // get and show the TOC and do NOT enable the PDF button
-            showTOCFile('#abouttoc','./mdfiles/toc.php?toc=./content/about.txt');
+            showTOCFile('#content_3-toc','./mdfiles/toc.php?toc=./content/about.txt');
             // create a smooth transition...
-            $('#about').addClass('fade');
-            $('#about').show();
+            $('#content_3').addClass('fade');
+            $('#content_3').show();
             setTimeout(function() {
-                $('#about').removeClass('fade');
+                $('#content_3').removeClass('fade');
             }, 250);
             break;
 
