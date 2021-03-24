@@ -3,3 +3,4 @@ logs/*.*
 *.session
 *.bak
 _*.md
+_*.sh
