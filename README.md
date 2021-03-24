@@ -158,6 +158,23 @@ Known Issues:
 
 * Links do not render correctly, they always contain the base URI when the PDF was created.
 * Page breaks, I'm not absolutely sure there's a problem. I'll read the docs again and see if I can get it working better.
+* In certain circumstances `&nbsp;` will **not** render correctly. For example, let's say you have a markdown heading like this - 
+
+```
+###### &nbsp;&nbsp;&nbsp;&nbsp;**Site Content**
+```
+
+Where the `&nbsp;` is there for force some indenting. And it's *expected* to render as this - 
+
+```
+<h6 id="site-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong>Site Content</strong></h6>
+```
+
+But this is was is rendered instead - 
+
+```
+<h6 id="nbspnbspnbspnbspsite-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong>Site Content</strong></h6>
+```
 
 ### Editing the Navigation Menu
 
