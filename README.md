@@ -28,9 +28,11 @@ There are some additional features that I required:
 For the most part the appearance is plain. With just a little embellishment on the navigation menu. Other than white, the colors are subdued.
 
 The initial page load and the transitions between navigation menu items utilize a brief fade-in instead of a harsh instant-on transition.
-
+<style>
+p img {border: 2px solid black;max-width:50%;}
+</style>
 <p align="center">
-  <img style="border: 2px solid black;max-width:50%;" src="./mdimg/home-800x600.png" alt="Home Screen Shot" txt="Home Screen Shot"/>
+  <img src="./mdimg/home-800x600.png" alt="Home Screen Shot" txt="Home Screen Shot"/>
 </p>
 
 ## What's Here
