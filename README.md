@@ -177,7 +177,7 @@ But this is was is rendered instead -
 <h6 id="nbspnbspnbspnbspsite-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong>Site Content</strong></h6>
 ```
 
-* Render fonts - It seems that changing fonts does not work well. The HTML gets rendered properly with the CSS classes. And if viewed independently the rendered HTML does apply the correct font. After some research it appears that the dependency `html2canvas` (*of html2pdf.js*) is responsible for the font(s).
+* Render fonts - It seems that changing fonts does not work well. The HTML gets rendered properly with the CSS classes. And if viewed independently the rendered HTML does apply the correct font. After some research it appears that the dependency `html2canvas` (*of html2pdf.js*) is responsible for the font(s). But `jsPDF` (*another dependency*) has the `.addFont()` function but it does not appear to be exposed or usable.
 
 ### Enabling the Font Select Menu
 
