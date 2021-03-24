@@ -11,7 +11,7 @@
     of 3 columns using Bootstrap 4.
 
     A text file is read, and parsed into an array of objects,
-    where a TOC item menu text and resourse pointer (a path to 
+    where a TOC item menu text and resource pointer (a path to 
     a markdown text file) is stored.
 
     The contets of the TOC text file look like this - 
