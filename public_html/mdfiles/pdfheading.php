@@ -27,6 +27,9 @@
         Set the creation date of a file - 
             $(Get-Item pastlorem.md).creationtime=$("01/01/2002 00:01 am")
 
+        Set the modification date of a file - 
+            $(Get-Item pastlorem.md).lastwritetime=$("01/01/2002 00:01 am")
+
     The variable `$filecyear` will will be "2002" when this script is executed on
     the file `pastlorem.md`.
 
@@ -40,7 +43,8 @@ $file = '';
 // was passed in the query
 if(isset($_REQUEST['doc'])) {
     $file = array_pop(explode('/', $_REQUEST['doc']));
-    $filecyear = date('Y', filectime('./content/'.$file));
+    //$filecyear = date('Y', filectime('./content/'.$file));
+    $filecyear = date('Y', filemtime('./content/'.$file));
 } else {
     echo "\n<h1>ERROR - missing query to specify file</h1>\n";
 }
