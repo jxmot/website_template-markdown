@@ -1,10 +1,10 @@
+
 @font-face {
     font-family: "FontAwesomeSolid";
     font-weight: bold;
     font-style: normal;
     src : url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/webfonts/fa-solid-900.ttf") format("truetype");
 }
-
 
 .mdtoggle {
     display: flex;
@@ -107,7 +107,7 @@ NOTE:
     margin-top: -2em;
 }
 
-#mdout,#aboutout {
+#content_1-out,#content_2-out,#content_3-out {
     margin-top: 2rem;
     margin-bottom: 5rem;
     font-size: 1rem;

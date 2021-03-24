@@ -69,17 +69,17 @@ body {
     }
 }
 
-#content_1,#about,#content_2,#contact,#thankyou {
+#content_1,#content_2,#content_3,#contact,#thankyou {
     margin-top: 5em;
 }
 
-#landing,#content_1,#about,#content_2,#contact {
+#landing,#content_1,#content_3,#content_2,#contact {
     opacity: 1;
     transition-duration: .5s;
     transition-property: opacity;
 }
 
-#landing.fade,#content_1.fade,#about.fade,#content_2.fade,#contact.fade {
+#landing.fade,#content_1.fade,#content_3.fade,#content_2.fade,#contact.fade {
     opacity: 0;
 }
 
