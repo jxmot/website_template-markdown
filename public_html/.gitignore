@@ -4,3 +4,4 @@ logs/*.*
 *.bak
 _*.md
 _*.sh
+READ-FIRST-BEFORE-UPDATING.txt
