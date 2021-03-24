@@ -251,3 +251,5 @@ The file `public_html/php/siteoptions.php` contains configuration settings used 
 * HTML Language settings
 * Footer message
 
+---
+<img src="http://webexperiment.info/extcounter/mdcount.php?id=wtmdpdf">
