@@ -210,3 +210,14 @@ The *logic* of this web page is implemtented in `public_html/assets/js/menu.js:r
 
 Changes would only need to occur in `public_html/assets/js/menu.js:runMenu()` when altering how the menu items work.
 
+### Site Options Configuration
+
+The file `public_html/php/siteoptions.php` contains configuration settings used in `index.php` and the PHP support files. It contains the following types of options:
+
+* Debug modes for forms and IP logging
+* Logging file format
+* Form settings, email addresses, subject line
+* Site and page title, description, and author
+* HTML Language settings
+* Footer message
+
