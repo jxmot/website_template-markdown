@@ -258,7 +258,7 @@ function showTOCFile(elem, loc, _cb = null) {
         $(elem).show();
 
         if(cb !== null) cb();
-    });
+    }, true);
 }
 
 
