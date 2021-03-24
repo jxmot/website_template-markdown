@@ -30,7 +30,7 @@ For the most part the appearance is plain. With just a little embellishment on t
 The initial page load and the transitions between navigation menu items utilize a brief fade-in instead of a harsh instant-on transition. This logic is implemented in `assets/js/menu.js:runMenu()`.
 
 <p align="center">
-  <img src="./mdimg/home-800x600.png" alt="Home Screen Shot" txt="Home Screen Shot" style="border: 2px solid black;max-width:50%;"/>
+  <img src="./mdimg/home-400x300.png" alt="Home Screen Shot" txt="Home Screen Shot" style="border: 2px solid black;max-width:50%;"/>
 </p>
 
 ## What's Here
@@ -100,7 +100,7 @@ The markdown content is contained in `public_html/mdfiles/content/` and related 
 The file `public_html/mdfiles/toc.php` is used for rendering the "table of contents" that appears when the appropriate nav menu item is chosen.
 
 <p align="center">
-  <img src="./mdimg/other-800x600.png" alt="Table of Contents Example Screen Shot" txt="Table of Contents Example Screen Shot" style="border: 2px solid black;max-width:50%;"/>
+  <img src="./mdimg/other-400x300.png" alt="Table of Contents Example Screen Shot" txt="Table of Contents Example Screen Shot" style="border: 2px solid black;max-width:50%;"/>
 </p>
 
 By passing a text file path+name to `toc.php` different tables can be rendered. For example, the `public_html/mdfiles/content/toc.txt` file contains - 
@@ -125,7 +125,7 @@ The TOC is rendered with a maximum of 3 items on a line. For >3 items a new row 
 Clicking on a "Topic" will render and display the associated markdown content file -
 
 <p align="center">
-  <img src="./mdimg/other_topic1-800x600.png" alt="Rendered Markdown Example Screen Shot" txt="Rendered Markdown Example Screen Shot" style="border: 2px solid black;max-width:50%;"/>
+  <img src="./mdimg/other_topic1-400x300.png" alt="Rendered Markdown Example Screen Shot" txt="Rendered Markdown Example Screen Shot" style="border: 2px solid black;max-width:50%;"/>
 </p>
 
 The "Save PDF" prompt and button will be seen only *if enabled in the markdown content file*.
