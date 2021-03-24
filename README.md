@@ -20,7 +20,7 @@ There are some additional features that I required:
   * The "table of contents" and the content files are read *on demand* and rendered. 
   * Links back to the site(page) will always be to the landing.
 * PDF Export: The ability to export selective content to PDF.
-* ALternate font: The ability to alternate between two fonts.
+* Alternate font: The ability to alternate between two fonts for display and output to PDF(*currently not working, investigating potential fixes and work-arounds*).
 * A minimal and lightweight appearance.
 * Small code footprint, < 200k not including third party libraries(~1.7m).
 
@@ -131,7 +131,7 @@ Clicking on a "Topic" will render and display the associated markdown content fi
 
 The "Save PDF" prompt and button will be seen only *if enabled in the markdown content file*.
 
-### Rendering Content
+## Rendering Content
 
 I used showdow.js 1.9.1 (github.com/showdownjs/showdown) to render the markdown to HTML. The copy in this repository has been modified by me - 
 
@@ -177,7 +177,7 @@ But this is was is rendered instead -
 <h6 id="nbspnbspnbspnbspsite-content">&nbsp;&nbsp;&nbsp;&nbsp;<strong>Site Content</strong></h6>
 ```
 
-* Render fonts - It seems that changing fonts does not work well. The HTML gets rendered properly with the CSS classes. And if viewed independently the rendered HTML does apply the correct font.
+* Render fonts - It seems that changing fonts does not work well. The HTML gets rendered properly with the CSS classes. And if viewed independently the rendered HTML does apply the correct font. After some research it appears that the dependency `html2canvas` (*of html2pdf.js*) is responsible for the font(s).
 
 ### Enabling the Font Select Menu
 
@@ -189,7 +189,7 @@ Enabling is done on a per-file basis. Each markdown content file can enable font
 
 **NOTE**: A table of contents must also be present. The Choose Font Below" buttond are rendered with the TOC.
 
-### Editing the Navigation Menu
+## Editing the Navigation Menu
 
 This works like the TOC. A text file contains the navigation menu item text and an associated HTML id. For example, the `public_html/php/navmenu.txt` file contains - 
 
@@ -234,13 +234,13 @@ $_SESSION['navmenutxt'] = './php/navmenu2.txt';
 
 and change the text file to the one you want to use.
 
-### Editing the Navigation Menu **Actions**
+## Editing the Navigation Menu **Actions**
 
 The *logic* of this web page is implemtented in `public_html/assets/js/menu.js:runMenu()`. Each menu item will initiate a jQuery `.show()` and fade-in when activated. Two of the actions will open and render a TOC when activated.
 
 Changes would only need to occur in `public_html/assets/js/menu.js:runMenu()` when altering how the menu items work.
 
-### Site Options Configuration
+## Site Options Configuration
 
 The file `public_html/php/siteoptions.php` contains configuration settings used in `index.php` and the PHP support files. It contains the following types of options:
 
