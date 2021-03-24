@@ -1,0 +1,5 @@
+Home,navsel_1
+About,navsel_4
+Other,navsel_3
+Stuff,navsel_2
+Contact,navsel_5
