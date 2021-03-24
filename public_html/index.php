@@ -62,7 +62,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="./assets/css/totop.css"/>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
     <!-- markdown -> html -->
@@ -80,13 +79,11 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="sitenavbar">
-                    <ul id="navmenu" class="navbar-nav">
-                        <li class="nav-item"><span id="navsel_1" class="nav-choice nav-pad nav-hover nav-text-pad">Home</span></li>
-                        <li class="nav-item"><span id="navsel_2" class="nav-choice nav-pad nav-hover nav-text-pad">Stuff</span></li>
-                        <li class="nav-item"><span id="navsel_3" class="nav-choice nav-pad nav-hover nav-text-pad">Other</span></li>    
-                        <li class="nav-item"><span id="navsel_4" class="nav-choice nav-pad nav-hover nav-text-pad">About</span></li>    
-                        <li class="nav-item"><span id="navsel_5" class="nav-choice nav-hover nav-text-pad">Contact</span></li> 
-                    </ul>
+<?php
+// Configure the Nav Menu
+$_SESSION['navmenutxt'] = './php/navmenu2.txt'; 
+require_once './php/navmenu.php'; 
+?>
                 </div>
             </nav>
         </div>
