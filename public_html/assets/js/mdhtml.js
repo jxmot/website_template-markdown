@@ -244,6 +244,15 @@ function showTOCFile(elem, loc, _cb = null) {
                             }
                         }
                     });
+                } else {
+                    $('#mdfont_a').addClass('mdfont-active');
+                    $('#mdfont_a').removeClass('mdfont-inactive');
+                    $('#mdfont_a').removeClass('nav-hover');
+                    $('#mdfont_b').removeClass('mdfont-active');
+                    $('#mdfont_b').addClass('mdfont-inactive');
+                    $('#mdfont_b').addClass('nav-hover');
+                    $(mdout).addClass('mdfont');
+                    $(mdout).removeClass('alt-mdfont');
                 }
 
                 // on this site <a> only exists in the rendered markdown file,
