@@ -15,6 +15,11 @@
 
         // use default navmenu.txt file
         require_once './php/navmenu.php';
+
+        // specify a file
+        $_SESSION['navmenutxt'] = './php/navmenu2.txt';
+        require_once './php/navmenu.php';
+
 */
 $file = './php/navmenu.txt';
 if(isset($_REQUEST['nav'])) {
@@ -56,14 +61,14 @@ if(file_exists($file)) {
 */
 ?>
                     <ul id="navmenu" class="navbar-nav">
-                        <?php $menuitem = explode(',', $navitems[0]); ?>
+<?php $menuitem = explode(',', $navitems[0]); ?>
                         <li class="nav-item"><span id="<?php echo $menuitem[1]; ?>" class="nav-choice nav-pad nav-hover nav-text-pad"><?php echo $menuitem[0]; ?></span></li>
-                        <?php $menuitem = explode(',', $navitems[1]); ?>
+<?php $menuitem = explode(',', $navitems[1]); ?>
                         <li class="nav-item"><span id="<?php echo $menuitem[1]; ?>" class="nav-choice nav-pad nav-hover nav-text-pad"><?php echo $menuitem[0]; ?></span></li>
-                        <?php $menuitem = explode(',', $navitems[2]); ?>
+<?php $menuitem = explode(',', $navitems[2]); ?>
                         <li class="nav-item"><span id="<?php echo $menuitem[1]; ?>" class="nav-choice nav-pad nav-hover nav-text-pad"><?php echo $menuitem[0]; ?></span></li>
-                        <?php $menuitem = explode(',', $navitems[3]); ?>
+<?php $menuitem = explode(',', $navitems[3]); ?>
                         <li class="nav-item"><span id="<?php echo $menuitem[1]; ?>" class="nav-choice nav-pad nav-hover nav-text-pad"><?php echo $menuitem[0]; ?></span></li>
-                        <?php $menuitem = explode(',', $navitems[4]); ?>
+<?php $menuitem = explode(',', $navitems[4]); ?>
                         <li class="nav-item"><span id="<?php echo $menuitem[1]; ?>" class="nav-choice nav-hover nav-text-pad"><?php echo $menuitem[0]; ?></span></li>
                     </ul>
