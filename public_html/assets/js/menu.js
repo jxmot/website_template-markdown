@@ -37,6 +37,9 @@ function runMenu(active) {
         }
     });
 
+    // clear all rendered content
+    $('section .mdselector').html('');
+
     // menu ID    Menu Item                     Section ID
     // --------   ----------------------------  --------------
     // navsel_1 = Home                          landing
@@ -68,10 +71,6 @@ function runMenu(active) {
         // When chosen, retrieve and display a TOC for the
         // content that is accessible here. 
         case 'navsel_3':
-            $('#content_3-toc').html('');
-            $('#content_3-toc').html('');
-            $('#content_2-toc').html('');
-            $('#content_2-out').html('');
             // get and show the TOC and enable the PDF button
             showTOCFile('#content_2-toc','./mdfiles/toc.php?toc=./content/toc.txt');
             // create a smooth transition...
@@ -83,10 +82,6 @@ function runMenu(active) {
             break;
 
         case 'navsel_4':
-            $('#content_2-toc').html('');
-            $('#content_2-out').html('');
-            $('#content_3-toc').html('');
-            $('#content_3-out').html('');
             // get and show the TOC and do NOT enable the PDF button
             showTOCFile('#content_3-toc','./mdfiles/toc.php?toc=./content/about.txt');
             // create a smooth transition...
