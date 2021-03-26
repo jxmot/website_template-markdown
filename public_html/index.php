@@ -96,7 +96,7 @@ require_once './php/navmenu.php';
         </section>
     </div>
     <div class="page-content">
-        <section id="content_1" class="content-selector sect-content" style="display:none;">
+        <section id="content_1" class="content-selector" style="display:none;">
             <div id="content_1-toc" class="mdselector">
             </div>
             <div id="content_1-out" class="mdselector sect-content">
@@ -118,70 +118,61 @@ require_once './php/navmenu.php';
         </section>
 
         <section id="contact" class="content-selector" style="display:none;">
-            <div class="row">
-                <form id="contactform-form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-                    <div class="form-row">
-                        <div class="col">
-                            <div class="form-group" id="nada-group">
-                                <div class="row">
-                                    <div class="col text-center">
-                                        <h2>Contact</h2>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <p> 
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                            sed do eiusmod tempor incididunt ut labore et dolore magna 
-                                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-                                        </p>
-                                    </div>
+            <div class=" sect-content">
+                <div class="row">
+                    <form id="contactform-form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+                        <div class="form-row">
+                            <div class="col">
+                                <p> 
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna 
+                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="form-group" id="name-group">
+                                    <input title="Your Name" placeholder="Your Name" class="form-control" type="text" id="form_name" name="form_name" required maxlength="48" size="16">
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col">
-                            <div class="form-group" id="name-group">
-                                <input title="Your Name" placeholder="Your Name" class="form-control" type="text" id="form_name" name="form_name" required maxlength="48" size="16">
+                            <div class="col">
+                                <div class="form-group" id="email-group">
+                                    <input title="Your email" placeholder="Your email" class="form-control" type="email" id="form_email" name="form_email" required maxlength="48" size="24">
+                                </div>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="form-group" id="email-group">
-                                <input title="Your email" placeholder="Your email" class="form-control" type="email" id="form_email" name="form_email" required maxlength="48" size="24">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-row form-content-center">
-                        <div class="col">
-                            <div class="form-group" id="msg-group">
-                                <textarea title="Your Message" placeholder="Your Message" class="form-control" rows="3" id="form_msg" name="form_msg" maxlength="160" required></textarea>
-                                <div class="row">
-                                    <div class="col-3 offset-9">
-                                        <span id="textcount" class="textcount"></span>
+                        <div class="form-row form-content-center">
+                            <div class="col">
+                                <div class="form-group" id="msg-group">
+                                    <textarea title="Your Message" placeholder="Your Message" class="form-control" rows="3" id="form_msg" name="form_msg" maxlength="160" required></textarea>
+                                    <div class="row">
+                                        <div class="col-3 offset-9">
+                                            <span id="textcount" class="textcount"></span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!--
-                        bot catcher
-                    -->
-                    <div hidden class="form-row">
-                        <div class="col">
-                            <div class="form-group" id="website-group">
-                                <input placeholder="Your Website" class="form-control" type="text" id="form_website" name="form_website" maxlength="128" size="24">
+                        <!--
+                            bot catcher
+                        -->
+                        <div hidden class="form-row">
+                            <div class="col">
+                                <div class="form-group" id="website-group">
+                                    <input placeholder="Your Website" class="form-control" type="text" id="form_website" name="form_website" maxlength="128" size="24">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col">
-                            <div id="submit-group" class="form-group text-center">
-                                <button id="contactus" type="submit" class="form-button">Send Message</button>
+                        <div class="form-row">
+                            <div class="col">
+                                <div id="submit-group" class="form-group text-center">
+                                    <button id="contactus" type="submit" class="form-button">Send Message</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </section>
 

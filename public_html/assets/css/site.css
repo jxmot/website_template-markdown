@@ -73,6 +73,12 @@ body {
     margin-top: 5em;
 }
 
+@media (max-width: 768px){
+    #content_1,#content_2,#content_3,#contact,#thankyou {
+        margin-top: 2.5em;
+    }
+}
+
 #landing,#content_1,#content_3,#content_2,#contact {
     opacity: 1;
     transition-duration: .5s;
@@ -115,13 +121,13 @@ body {
 
 @media screen and (max-width: 768px){
     .sect-content {
-        max-width: 100%
+        max-width: 80%
     }
 }
 
 @media screen and (max-width: 100px){
     .sect-content {
-        max-width: 100%
+        max-width: 80%
     }
 }
 

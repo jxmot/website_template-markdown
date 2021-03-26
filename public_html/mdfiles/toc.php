@@ -47,12 +47,11 @@ if(file_exists($file)) {
     // The query in the URL is a way to bypass browser and/or server caching 
     // of the CSS file. 
     echo "\n".'<link rel="stylesheet" href="./assets/css/toc.css?_='.time().'"/>'."\n";
+    echo '<div id="mdtoctable" class="container mdtoctable-center mdtoctable-width">'."\n";
 
     if(($x = count($tocitems)) >= 3) {
-        echo '<div id="mdtoctable" class="container mdtoctable-center mdtoctable-width">'."\n";
         echo '    <div class="row row-cols-3">'."\n";
     } else {
-        echo '<div id="mdtoctable" class="container mdtoctable-center mdtoctable-narrow">'."\n";
         echo '    <div class="row row-cols-'.$x.'">'."\n";
     }
 

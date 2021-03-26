@@ -108,6 +108,8 @@ function getMDHTML(loc, cb = null) {
         // HTML file. 
         converter.setOption('completeHTMLDocument', true);
 
+        // NOTE: html2pdf.js is using outdated versions of 
+        // jsPDF and html2canvas so this does not work.
         if($('#mdfont-ctrls').is(':visible')) {
             if($('#mdfont_b').hasClass('mdfont-active')) {
                 converter.setOption('bodyClasses', 'mdselector alt-mdfont');
