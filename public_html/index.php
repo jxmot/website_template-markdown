@@ -69,7 +69,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <!-- html -> pdf -->
     <script src="./assets/js/html2pdf.js-0.9.2/dist/html2pdf.bundle.js"></script>
-
 </head>
 <body id="pagebody" class="nocopy">
     <div id="maincontent">
@@ -85,7 +84,13 @@ $_SESSION['navmenutxt'] = './php/navmenu2.txt';
 require_once './php/navmenu.php'; 
 ?>
                 </div>
-            </nav>
+<?php
+if(defined('_GITHUBCORNER') && _GITHUBCORNER === true) {
+    $_SESSION['ghccfg'] = './php/githubcorner.txt'; 
+    require_once './php/githubcorner.php'; 
+}
+?>
+           </nav>
         </div>
         <section id="landing" class="content-selector splash-container">
             <div class="splash">
