@@ -88,6 +88,9 @@ define('FORM_SENTBY', 'no-reply@somewhere.com');
 // footer stuff
 define('FOOTER_MSG', '&copy;&nbsp;2017-'.date('Y').'&nbsp;My Site');
 
+// enable/disable the octocat in the corner
+define('_GITHUBCORNER', true);
+
 // Disables code in places that need to be dev-env compatible. This 
 // prevents having to keep two versions of some files.
 define('_NOTDEVENV', true);
