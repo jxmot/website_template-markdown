@@ -1,6 +1,4 @@
 <?php
-require_once './php/cidrmatch.php';
-
 /*
     Information that will be needed through out the
     PHP files to follow.

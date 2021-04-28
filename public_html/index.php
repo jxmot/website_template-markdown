@@ -14,6 +14,7 @@ require_once './php/rightnow.php';
 // for creating and writing to files
 require_once './php/writefile.php';
 // helpers
+require_once './php/cidrmatch.php';
 require_once './php/iphelpers.php';
 // used by forms
 session_start();
